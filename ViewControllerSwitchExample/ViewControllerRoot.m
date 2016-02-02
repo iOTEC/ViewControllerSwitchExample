@@ -7,7 +7,7 @@
 //
 
 #import "ViewControllerRoot.h"
-
+#import "ViewControllerD.h"
 @interface ViewControllerRoot ()
 
 @end
@@ -33,5 +33,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)method2Clicked:(id)sender {
+    NSLog(@"stack num=%d",(int) self.navigationController.viewControllers.count);
+    NSLog(@"stack 0 ViewController Class name=%@", [self.navigationController.viewControllers[0] class]);
+    [self performSegueWithIdentifier:@"RootToB" sender:nil];
+}
+- (IBAction)method3Clicked:(id)sender {
+    UIStoryboard *storyboard=[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    ViewControllerD *controllerD = [storyboard instantiateViewControllerWithIdentifier:@"ViewControllerDIdentifier"];
+    [self.navigationController pushViewController:controllerD animated:YES];
+}
 
 @end

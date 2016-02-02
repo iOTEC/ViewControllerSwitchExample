@@ -35,12 +35,15 @@
 }
 */
 - (IBAction)backToAclicked:(id)sender {
+    // Method 4
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)toRootClicked:(id)sender {
+    // Method 4
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 - (IBAction)toBClicked:(id)sender {
+    // Method 7
     NSMutableArray *controllers = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
     UIViewController *rootController = controllers[0];
     [controllers removeAllObjects];
@@ -52,6 +55,7 @@
     [[self navigationController] setViewControllers:controllers animated:YES];
 }
 - (IBAction)toDClicked:(id)sender {
+    // Method 7
     NSMutableArray *controllers = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
     UIViewController *rootController = controllers[0];
     [controllers removeAllObjects];
