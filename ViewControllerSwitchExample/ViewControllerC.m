@@ -68,5 +68,15 @@
     
     [[self navigationController] setViewControllers:controllers animated:YES];
 }
+- (IBAction)toCClicked:(id)sender {
+    NSMutableArray *controllers = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+    [controllers removeLastObject];
+    
+    ViewControllerC *vcC = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewControllerC"];
+    [controllers addObject:vcC];
+    
+    [[self navigationController] setViewControllers:controllers animated:YES];
+    
+}
 
 @end

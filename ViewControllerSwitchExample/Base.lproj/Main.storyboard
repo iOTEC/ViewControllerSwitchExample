@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="777-e7-Ts6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="777-e7-Ts6">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="height" constant="123" id="Kka-3V-tE4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQe-vy-DdM">
@@ -149,7 +149,7 @@
                                     <constraint firstAttribute="height" constant="123" id="ckc-yL-W9M"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEr-6B-knH">
@@ -196,7 +196,7 @@
         <!--View ControllerC-->
         <scene sceneID="L4p-2e-sij">
             <objects>
-                <viewController id="cMN-2M-mSv" customClass="ViewControllerC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerC" id="cMN-2M-mSv" customClass="ViewControllerC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o43-ah-ipP"/>
                         <viewControllerLayoutGuide type="bottom" id="u5Z-g9-uxR"/>
@@ -219,9 +219,21 @@
                                     <constraint firstAttribute="height" constant="123" id="mgZ-gt-hde"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H78-vz-EL1">
+                                <rect key="frame" x="50" y="317" width="89" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="T5W-Tq-wIX"/>
+                                    <constraint firstAttribute="height" constant="30" id="yaL-AN-6ax"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="to C"/>
+                                <connections>
+                                    <action selector="toCClicked:" destination="cMN-2M-mSv" eventType="touchUpInside" id="2QG-tB-IOU"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLZ-1W-5D3">
                                 <rect key="frame" x="50" y="360" width="89" height="30"/>
                                 <constraints>
@@ -283,12 +295,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bLZ-1W-5D3" firstAttribute="top" secondItem="H78-vz-EL1" secondAttribute="bottom" constant="13" id="8x5-Au-d0Z"/>
                             <constraint firstItem="u5Z-g9-uxR" firstAttribute="top" secondItem="7kJ-hV-CZs" secondAttribute="bottom" constant="30" id="FHd-1B-Ng4"/>
                             <constraint firstItem="QSs-b4-w05" firstAttribute="centerX" secondItem="4NG-dd-nMb" secondAttribute="centerX" id="FYx-3Y-Bs7"/>
                             <constraint firstItem="uFA-ZS-Mw7" firstAttribute="centerX" secondItem="4NG-dd-nMb" secondAttribute="centerX" id="FsH-EX-yyh"/>
                             <constraint firstItem="WPc-X9-k0B" firstAttribute="centerX" secondItem="7kJ-hV-CZs" secondAttribute="centerX" id="Mlj-oQ-OPT"/>
                             <constraint firstItem="7kJ-hV-CZs" firstAttribute="top" secondItem="WPc-X9-k0B" secondAttribute="bottom" constant="30" id="RVA-O0-MzK"/>
                             <constraint firstItem="JFB-Ex-5Il" firstAttribute="centerX" secondItem="WPc-X9-k0B" secondAttribute="centerX" id="SLE-Xv-j2R"/>
+                            <constraint firstItem="H78-vz-EL1" firstAttribute="centerX" secondItem="bLZ-1W-5D3" secondAttribute="centerX" id="VVY-0z-Kqh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7kJ-hV-CZs" secondAttribute="trailing" constant="10" id="Vkm-y6-dEx"/>
                             <constraint firstItem="WPc-X9-k0B" firstAttribute="bottom" secondItem="7kJ-hV-CZs" secondAttribute="bottom" constant="-30" id="b2b-me-xMH"/>
                             <constraint firstItem="bLZ-1W-5D3" firstAttribute="centerX" secondItem="JFB-Ex-5Il" secondAttribute="centerX" id="hv4-d9-ZqK"/>
@@ -357,7 +371,7 @@
                                     <constraint firstAttribute="width" constant="188" id="qMG-ai-Bt5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnf-bL-hFQ">
@@ -427,7 +441,7 @@
                                     <constraint firstAttribute="width" constant="188" id="r1X-g3-Di4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By iotec.tw" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ceu-Ux-ZBi">
